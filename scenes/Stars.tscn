@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/stars_far.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Stars.gd" type="Script" id=2]
+[ext_resource path="res://sprites/stars_close.png" type="Texture" id=3]
+
+[node name="Stars" type="Node"]
+
+[node name="StarsFar" type="Node2D" parent="." index="0"]
+
+[node name="StarsFar_0" type="Sprite" parent="StarsFar" index="0"]
+
+position = Vector2( 0, -180 )
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( -32, 132, 8, 4 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+velocity = Vector2( 0, 50 )
+
+[node name="StarsFar_1" type="Sprite" parent="StarsFar" index="1"]
+
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( -32, 132, 8, 4 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+velocity = Vector2( 0, 50 )
+
+[node name="StarsFar_2" type="Sprite" parent="StarsFar" index="2"]
+
+position = Vector2( 0, 180 )
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( -32, 132, 8, 4 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+velocity = Vector2( 0, 50 )
+
+[node name="StarsClose" type="Node2D" parent="." index="1"]
+
+z_index = 10
+_sections_unfolded = [ "Z Index" ]
+
+[node name="StarsClose_0" type="Sprite" parent="StarsClose" index="0"]
+
+position = Vector2( 0, -180 )
+texture = ExtResource( 3 )
+centered = false
+region_rect = Rect2( -32, 132, 8, 4 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+velocity = Vector2( 0, 100 )
+
+[node name="StarsClose_1" type="Sprite" parent="StarsClose" index="1"]
+
+texture = ExtResource( 3 )
+centered = false
+region_rect = Rect2( -32, 132, 8, 4 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+velocity = Vector2( 0, 100 )
+
+[node name="StarsClose_2" type="Sprite" parent="StarsClose" index="2"]
+
+position = Vector2( 0, 180 )
+texture = ExtResource( 3 )
+centered = false
+region_rect = Rect2( -32, 132, 8, 4 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+velocity = Vector2( 0, 100 )
+
+
