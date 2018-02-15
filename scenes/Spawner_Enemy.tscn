@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/Spawner_Enemy.gd" type="Script" id=1]
 
-[node name="Spawner_Enemy" type="Node" index="0"]
+[node name="Spawner_Enemy" type="Node"]
 
 script = ExtResource( 1 )
 

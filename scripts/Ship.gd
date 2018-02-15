@@ -11,9 +11,8 @@ func _process(delta):
     translate(Vector2(motion, 0))
 
     # Clamping to view.
-    var view_size = get_viewport_rect().size
     var pos = position
-    pos.x = clamp(pos.x, 0 + 16, view_size.x - 16)
+    pos.x = clamp(pos.x, 0 + 16, Utils.view_size.x - 16)
     position = pos
 
     pass
