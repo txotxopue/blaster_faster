@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 15, 15 )
 
-[node name="Ship" type="Area2D" index="0"]
+[node name="Ship" type="Area2D"]
 
 position = Vector2( 91, 280 )
 input_pickable = true
@@ -32,5 +32,17 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+
+[node name="Cannons" type="Node2D" parent="." index="2"]
+
+[node name="Left" type="Position2D" parent="Cannons" index="0"]
+
+position = Vector2( -12, -8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Right" type="Position2D" parent="Cannons" index="1"]
+
+position = Vector2( 12, -8 )
+_sections_unfolded = [ "Transform" ]
 
 

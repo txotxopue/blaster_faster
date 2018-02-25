@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/Ship.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Spawner_Enemy.tscn" type="PackedScene" id=3]
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
 [node name="Stars" parent="." index="0" instance=ExtResource( 1 )]
 
