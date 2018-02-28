@@ -2,7 +2,10 @@
 
 extends Node
 
-const enemy_kamikaze = preload("res://scenes/Enemy_Kamikaze.tscn")
+const enemies = [
+    preload("res://scenes/EnemyKamikaze.tscn"),
+    preload("res://scenes/EnemyClever.tscn"),
+]
 
 func _ready():
 	spawn()
@@ -11,7 +14,7 @@ func _ready():
 func spawn():
 	while true:
 		randomize() # changes random seed.
-		var enemy = enemy_kamikaze.instance()
+		var enemy = Utils.choose(enemies).instance()
 		var pos = Vector2()
 		pos.x = rand_range(0 + 16, Utils.view_size.x - 16)
 		pos.y = 0 - 16
