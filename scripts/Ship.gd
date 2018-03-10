@@ -2,10 +2,12 @@
 
 extends Area2D
 
+var armor = 4 setget set_armor
 const scn_laser = preload("res://scenes/LaserShip.tscn")
 
 
 func _ready():
+    add_to_group("ship")
     yield(Utils.create_timer(0.5), "timeout")
     shoot()
     pass
@@ -31,6 +33,11 @@ func shoot():
         create_laser(pos_right)
         
         yield(Utils.create_timer(0.25), "timeout")
+    pass
+    
+func set_armor(new_value):
+    armor = new_value
+    if armor <= 0: queue_free()
     pass
 
 
