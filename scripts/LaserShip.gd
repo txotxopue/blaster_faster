@@ -9,5 +9,7 @@ func _ready():
 func _on_area_enter(other):
     if other.is_in_group("enemy"):
         other.armor -= 1
+        create_flare()
+        Utils.remote_call("Camera", "shake", 1, 0.13)
         queue_free()
     pass

@@ -8,6 +8,9 @@ func _ready():
     
     $PSmoke.set_emitting(true)
     $PFlare.set_emitting(true)
+    
+    Utils.remote_call("Camera", "shake", 8, 0.2)
+    
     $AnimationPlayer.play("fade_out")
     
     yield($AnimationPlayer, "animation_finished")

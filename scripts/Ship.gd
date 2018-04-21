@@ -5,6 +5,7 @@ extends Area2D
 var armor = 4 setget set_armor
 const scn_laser     = preload("res://scenes/LaserShip.tscn")
 const scn_explosion = preload("res://scenes/Explosion.tscn")
+const scn_flash     = preload("res://scenes/Flash.tscn")
 
 
 func _ready():
@@ -37,6 +38,9 @@ func shoot():
     pass
     
 func set_armor(new_value):
+    if new_value < armor:
+        Utils.main_node.add_child(scn_flash.instance())
+    
     armor = new_value
     if armor <= 0: 
         create_explosion()
