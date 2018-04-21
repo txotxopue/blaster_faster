@@ -23,6 +23,7 @@ func set_armor(new_value):
     if is_queued_for_deletion(): return
     armor = new_value
     if armor <= 0:
+        Utils.find_node("Score").score += 5
         create_explosion()
         queue_free()
     pass

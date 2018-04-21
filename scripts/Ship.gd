@@ -7,6 +7,7 @@ const scn_laser     = preload("res://scenes/LaserShip.tscn")
 const scn_explosion = preload("res://scenes/Explosion.tscn")
 const scn_flash     = preload("res://scenes/Flash.tscn")
 
+signal armor_changed
 
 func _ready():
     add_to_group("ship")
@@ -42,6 +43,8 @@ func set_armor(new_value):
         Utils.main_node.add_child(scn_flash.instance())
     
     armor = new_value
+    emit_signal("armor_changed", armor)
+    
     if armor <= 0: 
         create_explosion()
         queue_free()

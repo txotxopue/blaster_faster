@@ -22,7 +22,7 @@ tracks/0/keys = {
 "values": [ Color( 0.675781, 0.11351, 0.11351, 1 ), Color( 0.714844, 0.111694, 0.111694, 0 ) ]
 }
 
-[node name="Flash" type="Sprite" index="0"]
+[node name="Flash" type="Sprite"]
 
 modulate = Color( 0.714844, 0.111694, 0.111694, 0 )
 position = Vector2( -15.4472, -13.7671 )
