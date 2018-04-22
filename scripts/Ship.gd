@@ -50,6 +50,7 @@ func set_armor(new_value):
     if new_value > 4: return
     
     if new_value < armor:
+        AudioPlayer.play(AudioPlayer.as_laser_ship)
         Utils.main_node.add_child(scn_flash.instance())
     
     armor = new_value

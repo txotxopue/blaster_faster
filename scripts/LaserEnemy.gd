@@ -4,6 +4,7 @@ extends "res://scripts/laser.gd"
 
 func _ready():
     connect("area_entered", self, "_on_area_enter")
+    AudioPlayer.play(AudioPlayer.as_laser_enemy)
     pass
 
 func _on_area_enter(other):

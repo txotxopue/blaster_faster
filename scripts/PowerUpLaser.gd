@@ -9,5 +9,6 @@ func _ready():
 func _on_area_entered(other):
     if other.is_in_group("ship"):
         other.is_double_shooting = true
+        AudioPlayer.play(AudioPlayer.as_powerup)
         queue_free()
     pass

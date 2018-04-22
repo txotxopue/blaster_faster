@@ -8,8 +8,9 @@ const enemies = [
 ]
 
 func _ready():
-	spawn()
-	pass
+    yield(Utils.create_timer(1.2), "timeout")
+    spawn()
+    pass
 
 func spawn():
 	while true:
